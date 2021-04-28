@@ -1,0 +1,28 @@
+
+<div style="text-align: center;">
+  <h1>{{title}}</h1>
+</div>
+<div class="container">
+  <div class="row">
+  <div class="search-hero">
+  <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+  </div>
+
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th scope="col">Employee ID</th>
+          <th scope="col">Employee Name</th>
+          <th scope="col">Employee Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let emp of filterData | filter:term">
+          <td>{{emp.empId}}</td>
+          <td>{{emp.empName}}</td>
+          <td>{{emp.empLocation}}</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+</div>
